@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <title>page3 - 通識</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      overflow: hidden;
+      background-color: #f0f8ff;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header 樣式 */
+    .main-header {
+      background: linear-gradient(90deg, #7cafed, #0057c0);
+      padding: 20px 0;
+    }
+    .main-header .container {
+      display: flex;
+      align-items: center;
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
+    }
+    .main-header .logo {
+      width: 100px;
+    }
+    .main-header .logo img {
+      width: 100%;
+    }
+    .main-header .main-nav {
+      margin-left: auto;
+      display: flex;
+    }
+    .main-header .main-nav a {
+      text-decoration: none;
+      color: #fff;
+      padding: 5px 1em;
+      transition: 0.3s;
+    }
+    .main-header .main-nav a:hover {
+      transform: translateY(-10px);
+    }
+
+    /* Main 區域樣式 */
+    main {
+      flex: 1;
+      display: flex;
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+      gap: 20px;
+      overflow-y: auto;
+    }
+
+    aside, section {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      margin-top: 10px;
+    }
+
+    .three-columns {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 顯示三個卡片 */
+      gap: 20px;
+      margin-top: 10px;
+    }
+
+    /* 標題樣式 */
+    .section-title {
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      color: #000000; /* 黑色字 */
+    }
+
+    /* 左邊大一通識區塊文字顏色為黑色 */
+    aside {
+      color: #000000; /* 黑色文字 */
+    }
+
+    aside .card h2 {
+      color: #000000; /* 黑色字 */
+    }
+
+    /* 右邊標題顏色 */
+    section .section-title {
+      color: #000000; /* 黑色字 */
+    }
+
+    /* 卡片基本樣式 */
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      transition: 0.3s;
+      text-align: center;
+      height: 150px; /* 固定高度 */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    }
+    .card h2 {
+      font-size: 20px;
+    }
+    .card h2 a {
+      text-decoration:none;
+    }
+    .card h2 a:hover {
+      text-decoration: underline;
+    }
+
+    /* 左邊卡片顏色 */
+    aside .card {
+      background: #a5d8ff; /* 淺藍色 */
+      color: #000000; /* 黑色字 */
+    }
+
+    /* 右邊卡片顏色 */
+    section .card {
+      background: #d8bdf7 ; /* 紫色 */
+      color: #000000; /* 黑色字 */
+    }
+
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="main-header">
+    <div class="container">
+      <a href="#" class="logo">
+        <img src="tku.webp" alt="tku" style="cursor: pointer;" onclick="window.location.href='https://www.tku.edu.tw/';" />
+        <img src="wa1.png" alt="圖騰1" />
+        <img src="wa2.png" alt="圖騰2" />
+      </a>
+      <nav class="main-nav">
+        <a href="index.html">首頁</a>
+        <a href="page%20two.html">微學分</a>
+        <a href="page%20three.html">通識</a>
+        <a href="page%20four.html">微學程</a>
+        <a href="page%20five.html">總覽</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main 區域 -->
+  <main>
+    <!-- 左側分類 -->
+    <aside>
+      <div class="section-title">大一通識</div> <!-- 左邊標題 -->
+      <div class="three-columns">
+        <div class="card">
+          <h2><a href="http://www.core.tku.edu.tw/Front/class/class1/Page.aspx?id=zMPpvkI63H4=&lang=zh-tw" target="_blank"class="university-learning ">外國語文</a></h2>
+        </div>
+        <div class="card">
+          <h2><a href="http://www.core.tku.edu.tw/Front/class/class1/Page.aspx?id=zMPpvkI63H4=&lang=zh-tw" target="_blank">中國語言能力表達</a></h2>
+        </div>
+        <div class="card">
+          <h2><a href="http://www.core.tku.edu.tw/Front/class/class1/Page.aspx?id=zMPpvkI63H4=&lang=zh-tw" target="_blank">社團學習與實作</a></h2>
+        </div>
+        <div class="card">
+          <h2><a href="http://www.core.tku.edu.tw/Front/class/class1/Page.aspx?id=zMPpvkI63H4=&lang=zh-tw" target="_blank">大學學習</a></h2>
+        </div>
+        <div class="card">
+          <h2><a href="http://www.core.tku.edu.tw/Front/class/class1/Page.aspx?id=zMPpvkI63H4=&lang=zh-tw" target="_blank">探索永續</a></h2>
+        </div>
+        <div class="card">
+          <h2><a href="http://www.core.tku.edu.tw/Front/class/class1/Page.aspx?id=zMPpvkI63H4=&lang=zh-tw" target="_blank">AI與程式語言</a></h2>
+        </div>
+        <div class="card">
+          <h2><a href="http://www.core.tku.edu.tw/Front/class/class1/Page.aspx?id=zMPpvkI63H4=&lang=zh-tw" target="_blank">校園與社區服務學習</a></h2>
+        </div>
+        <div class="card">
+          <h2><a href="http://www.core.tku.edu.tw/Front/class/class1/Page.aspx?id=zMPpvkI63H4=&lang=zh-tw" target="_blank">全民國防教育軍事訓練</a></h2>
+        </div>
+        <div class="card">
+          <h2><a href="http://www.core.tku.edu.tw/Front/class/class1/Page.aspx?id=zMPpvkI63H4=&lang=zh-tw" target="_blank">體育</a></h2>
+        </div>
+      </div>
+    </aside>
+
+    <!-- 右側課程卡片 -->
+    <section>
+      <div class="section-title">微學分</div> <!-- 右邊標題 -->
+      <div class="three-columns">
+        <div class="card">
+          <h2><a href="page%20two.html">AI創智學院</a></h2>
+        </div>
+        <div class="card">
+          <h2><a href="page%20two.html">大眾傳播學系</a></h2>
+        </div>
+        <div class="card">
+          <h2><a href="page%20two.html">建築系</a></h2>
+        </div>
+        <div class="card">
+          <h2><a href="page%20two.html">諮商職涯暨學習發展輔導中心</a></h2>
+        </div>
+        <div class="card">
+          <h2><a href="page%20two.html">研究發展處</a></h2>
+        </div>
+        <div class="card">
+          <h2><a href="page%20two.html">原住民族學生資源中心</a></h2>
+        </div>
+        <div class="card">
+          <h2><a href="page%20two.html">永續發展與社會創新中心</a></h2>
+        </div>
+        <div class="card">
+          <h2><a href="page%20two.html">通識與核心課程中心</a></h2>
+        </div>
+        <div class="card">
+          <h2><a href="page%20two.html">體育教學與活動組</a></h2>
+        </div>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <title>page2 - 微學分</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f0f8ff;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Header 樣式 */
+    .main-header {
+      background: linear-gradient(90deg, #7cafed, #0057c0);
+      padding: 20px 0;
+    }
+    .main-header .container {
+      display: flex;
+      align-items: center;
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
+    }
+    .main-header .logo {
+      width: 100px;
+    }
+    .main-header .logo img {
+      width: 100%;
+    }
+    .main-header .main-nav {
+      margin-left: auto;
+      display: flex;
+    }
+    .main-header .main-nav a {
+      text-decoration: none;
+      color: #fff;
+      padding: 5px 1em;
+      transition: 0.3s;
+    }
+    .main-header .main-nav a:hover {
+      transform: translateY(-10px);
+    }
+
+    /* 微學分卡片區域樣式 */
+    main {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      transition: 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.05);
+      background-color: #e0f7ff;
+    }
+    .card h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #023047;
+    }
+    .card ul {
+      padding-left: 20px;
+    }
+    .card ul li {
+      font-size: 16px;
+      margin-bottom: 6px;
+      color: #333;
+    }
+
+    /* Back to Top button */
+    #backToTop {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #0057c0;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      padding: 18px;
+      font-size: 18px;
+      cursor: pointer;
+      display: none;
+      transition: background-color 0.3s;
+    }
+
+    #backToTop:hover {
+      background-color: #7cafed;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="main-header">
+    <div class="container">
+      <a href="#" class="logo">
+        <img src="tku.webp" alt="tku" style="cursor: pointer;" onclick="window.location.href='https://www.tku.edu.tw/';" />
+        <img src="wa1.png" alt="圖騰1" />
+        <img src="wa2.png" alt="圖騰2" />
+      </a>
+      <nav class="main-nav">
+        <a href="index.html">首頁</a>
+        <a href="page%20two.html">微學分</a>
+        <a href="page%20three.html">通識</a>
+        <a href="page%20four.html">微學程</a>
+        <a href="page%20five.html">總覽</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 微學分卡片內容 -->
+  <main>
+    <div class="card">
+      <h2><a href="http://www.tk.tku.edu.tw/" target="_blank">AI創智學院</a></h2>
+       <ul>
+        <li>機器學習與自然語言主題</li>
+        <li>實作體驗工作坊視覺主題</li>
+        <li>微軟認證線上課程－基礎</li>
+        <li>微軟認證線上課程－進階1</li>
+        <li>微軟認證線上課程－進階2</li>
+       </ul>
+    </div>
+    <div class="card">
+     <h2><a href="https://www.tamx.tku.edu.tw/" target="_blank">大眾傳播學系</a></h2>
+     <ul>
+        <li>淡江影像藝術工坊培力課程</li>
+        <li>淡江影像藝術工坊培力課程－策展活動</li>
+        </ul>
+    </div>
+    <div class="card">
+      <h2><a href="http://www.arch.tku.edu.tw/" target="_blank">建築系</a></h2>
+      <ul>
+        <li>組構概念學生創新創業專題</li>
+        <li>移地國際工作坊交流與實作競賽</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2><a href="https://sa.tku.edu.tw/spirit/?page_id=3982" target="_blank">諮商職涯暨學習發展輔導中心</a></h2>
+      <ul>
+        <li>正念藝術治療</li>
+        <li>幸福心視界：情緒與選擇的實踐指南工作坊</li>
+        <li>生命自有出路：心理師的經驗談與大學生的心理調適</li>
+        <li>正念藝術陪伴：複合式媒材油畫的心靈之旅</li>
+        <li>靈「氣」手串：玩出創意，串起能量之美</li>
+        <li>藝術陪伴-手機攝影</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2><a href="https://www.research.tku.edu.tw/main.aspx" target="_blank">研究發展處</a></h2>
+      <ul>
+        <li>永續發展實戰平台-ESG+AI實戰訓練</li>
+        <li>永續發展實戰平台- VR碳盤查演練實作</li>
+        <li>ESG+AI實戰訓練</li>
+        <li>歐盟永續發展實戰平台</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2><a href="http://spirit.tku.edu.tw/tku/main.jsp?sectionId=9" target="_blank">原住民族學生資源中心</a></h2>
+      <ul>
+        <li>生涯規劃工作坊</li>
+        <li>文化工藝坊－樹皮布體驗</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2><a href="https://sdsi.tku.edu.tw/" target="_blank">永續發展與社會創新中心</a></h2>
+      <ul>
+        <li>校園永續－綠色生活實驗室</li>
+      </ul>
+    </div>
+    <div class="card">
+        <h2><a href="http://www.core.tku.edu.tw/" target="_blank">通識與核心課程中心</a></h2>
+        <ul>
+          <li>2025淡江音樂季</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2><a href="https://www.sports.tku.edu.tw/physical-education-and-activity-group/" target="_blank">體育教學與活動組</a></h2>
+        <ul>
+          <li>體育活動與競賽</li>
+        </ul>
+      </div>
+  </main>
+
+  <!-- Back to Top button -->
+  <button id="backToTop" onclick="scrollToTop()">↑</button>
+
+  <script>
+    // Show the button when scrolling down
+    window.onscroll = function() {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        document.getElementById("backToTop").style.display = "block";
+      } else {
+        document.getElementById("backToTop").style.display = "none";
+      }
+    };
+
+    // Scroll to the top when the button is clicked
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>

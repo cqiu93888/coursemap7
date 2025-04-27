@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<title>微學程總覽</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #f0f8ff;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+}
+
+/* Header 樣式 */
+.main-header {
+  background: linear-gradient(90deg, #7cafed, #0057c0);
+  padding: 20px 0;
+}
+.main-header .container {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+.main-header .logo {
+  width: 100px;
+}
+.main-header .logo img {
+  width: 100%;
+}
+.main-header .main-nav {
+  margin-left: auto;
+  display: flex;
+}
+.main-header .main-nav a {
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 1em;
+  transition: 0.3s;
+}
+.main-header .main-nav a:hover {
+  transform: translateY(-5px);
+}
+
+/* Image Style */
+.enlarged-image {
+  width: 100%;
+  max-width: 1200px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.enlarged-image:hover {
+  transform: scale(1.05);
+}
+
+/* Modal Style for Enlarged Image */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal img {
+  max-width: 100%;
+  max-height: 100%;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Header -->
+<header class="main-header">
+  <div class="container">
+    <a href="#" class="logo">
+      <img src="tku.webp" alt="tku" style="cursor: pointer;" onclick="window.location.href='https://www.tku.edu.tw/';" />
+      <img src="wa1.png" alt="圖騰1" />
+      <img src="wa2.png" alt="圖騰2" />
+    </a>
+    <nav class="main-nav">
+      <a href="index.html">首頁</a>
+      <a href="page%20two.html">微學分</a>
+      <a href="page%20three.html">通識</a>
+      <a href="page%20four.html">微學程</a>
+      <a href="page%20five.html">總覽</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Image Section -->
+<div style="text-align: center; margin-top: 50px;">
+  <img src="picture.png" alt="Image Description" class="enlarged-image" onclick="openModal(this)" />
+</div>
+
+<!-- Modal for Enlarged Image -->
+<div id="imageModal" class="modal" onclick="closeModal()">
+  <img id="modalImage" src="" alt="Enlarged Image" />
+</div>
+
+<script>
+// Function to open the modal with the image
+function openModal(img) {
+  var modal = document.getElementById("imageModal");
+  var modalImg = document.getElementById("modalImage");
+  modal.style.display = "flex";
+  modalImg.src = img.src;
+}
+
+// Function to close the modal
+function closeModal() {
+  document.getElementById("imageModal").style.display = "none";
+}
+</script>
+
+</body>
+</html>

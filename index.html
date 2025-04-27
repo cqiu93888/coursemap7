@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <title>page1 - 首頁</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      overflow: hidden;
+      background-color: #f0f8ff;
+      height: 100vh;
+    }
+
+    /* Header 樣式 */
+    .main-header {
+      background: linear-gradient(90deg, #7cafed, #0057c0);
+      padding: 20px 0;
+    }
+    .main-header .container {
+      display: flex;
+      align-items: center;
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
+    }
+    .main-header .logo {
+      width: 100px;
+    }
+    .main-header .logo img {
+      width: 100%;
+    }
+    .main-header .main-nav {
+      margin-left: auto;
+      display: flex;
+    }
+    .main-header .main-nav a {
+      text-decoration: none;
+      color: #fff;
+      padding: 5px 1em;
+      transition: 0.3s;
+    }
+    .main-header .main-nav a:hover {
+      transform: translateY(-10px);
+    }
+
+    /* 泡泡區 */
+    main {
+      position: relative;
+      width: 100%;
+      height: calc(100vh - 100px);
+      overflow: hidden;
+    }
+    .circle {
+      width: 200px;
+      height: 200px;
+      background-color: #8ecae6;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      font-weight: bold;
+      color: #023047;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      position: absolute;
+      animation: floatMove 15s ease-in-out infinite alternate;
+      text-align: center;
+    }
+    .circle a {
+      text-decoration: none;
+      color: #023047;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-size: 20px;
+    }
+    .circle a:hover {
+      background-color: #219ebc;
+      color: #fff;
+      transition: 0.3s;
+    }
+
+    /* 泡泡飄動動畫 */
+    @keyframes floatMove {
+      0% {
+        transform: translate(0, 0);
+      }
+      100% {
+        transform: translate(50px, 50px);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="main-header">
+    <div class="container">
+      <a href="#" class="logo">
+        <img src="tku.webp" alt="tku" style="cursor: pointer;" onclick="window.location.href='https://www.tku.edu.tw/';" />
+        <img src="wa1.png" alt="圖騰1" />
+        <img src="wa2.png" alt="圖騰2" />
+      </a>
+      <nav class="main-nav">
+        <a href="index.html">首頁</a>
+        <a href="page%20two.html">微學分</a>
+        <a href="page%20three.html">通識</a>
+        <a href="page%20four.html">微學程</a>
+        <a href="page%20five.html">總覽</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 泡泡區 -->
+  <main id="bubbleArea">
+    <div class="circle"><a href="page%20two.html">微學分</a></div>
+    <div class="circle"><a href="page%20three.html">通識</a></div>
+    <div class="circle"><a href="page%20four.html">微學程</a></div>
+    <div class="circle"><a href="page%20five.html">總覽</a></div>
+    <div class="circle"><a href="#">😊</a></div>
+    <div class="circle"><a href="#">🎈</a></div>
+  </main>
+
+  <script>
+    const bubbles = document.querySelectorAll('.circle');
+    const areaWidth = window.innerWidth;
+    const areaHeight = window.innerHeight - 100;
+    const bubbleSize = 200;
+    const placedBubbles = [];
+
+    function isOverlap(x, y) {
+      for (let pos of placedBubbles) {
+        const dx = pos.x - x;
+        const dy = pos.y - y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+        if (distance < bubbleSize + 30) { // 保持距離 (泡泡大小 + 20px 間隔)
+          return true;
+        }
+      }
+      return false;
+    }
+
+    bubbles.forEach(bubble => {
+      let x, y;
+      let attempts = 0;
+      do {
+        x = Math.random() * (areaWidth - bubbleSize);
+        y = Math.random() * (areaHeight - bubbleSize);
+        attempts++;
+        if (attempts > 100) break; // 防止無限迴圈
+      } while (isOverlap(x, y));
+
+      placedBubbles.push({ x, y });
+
+      const randomDuration = 12 + Math.random() * 8; // 12~20秒
+
+      bubble.style.left = `${x}px`;
+      bubble.style.top = `${y}px`;
+      bubble.style.animationDuration = `${randomDuration}s`;
+    });
+  </script>
+
+</body>
+</html>
